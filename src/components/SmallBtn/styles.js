@@ -1,17 +1,16 @@
 import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
-        borderRadius: 100,
+        borderRadius: 10,
         alignItems: 'center',
-        paddingVertical: 7,
-        width: '100%',
+        paddingVertical: 10,
         marginVertical: 10,
-        borderWidth: 3,
-        borderColor: '#396929',
+        width: 150,
+
     },
 
     btnText:{
-        fontSize: 25,
+        fontSize: 18,
         fontWeight: 'bold',
        
     }

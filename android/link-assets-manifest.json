@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/DancingScript-Medium.ttf",
+      "sha1": "575d42d95b4b562cbd91341e61ab754386ffeadd"
+    },
+    {
+      "path": "src/assets/fonts/Inconsolata_Condensed-Light.ttf",
+      "sha1": "50c9f6bf9b1e1e4ac0e3f6919f35a0313efdd7a7"
+    }
+  ]
+}

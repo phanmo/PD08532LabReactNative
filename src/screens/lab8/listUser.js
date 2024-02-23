@@ -1,4 +1,4 @@
-import { Modal, ScrollView, TextInput } from 'react-native';
+import { Image, Modal, ScrollView, TextInput } from 'react-native';
 import { Text, TouchableOpacity, View } from "react-native";
 import { styles } from './styles';
 import React, { useEffect, useState } from "react";
@@ -53,6 +53,7 @@ const ListUser = ({ navigation }) => {
             {data.length
                 ? data.map((item, index) => (
                     <View style={styles.container} key={index}>
+                            <Image style={styles.img} src={item.image}/>
                         <View style={styles.containerText}>
                             <Text style={styles.name}>{item.name}</Text>
                             <Text style={styles.birthday}>{item.birthday}</Text>
@@ -90,10 +91,12 @@ const ListUser = ({ navigation }) => {
 const UpdateModel = props => {
     const [name, setName] = useState(undefined);
     const [birthday, setBirthday] = useState(undefined);
+    const [image, setImage] = useState(undefined);
     useEffect(() => {
         if (props.selectedUser) {
             setName(props.selectedUser.name);
             setBirthday(props.selectedUser.birthday);
+            setBirthday(props.selectedUser.image);
         }
     }, [props.selectedUser]);
     const updateUser = async () => {
@@ -104,7 +107,7 @@ const UpdateModel = props => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ name, birthday }),
+            body: JSON.stringify({ name, birthday, image }),
         });
         result = await result.json();
         if (result) {
@@ -125,6 +128,11 @@ const UpdateModel = props => {
                 placeholder='Enter birthday'
                 value={birthday}
                 onChangeText={text => setBirthday(text)}></TextInput>
+            <TextInput
+                style={styles.input}
+                placeholder='Enter imagePath'
+                value={birthday}
+                onChangeText={text => setImage(text)}></TextInput>
             <View style={styles.buttonGroup}>
                 <TouchableOpacity style={styles.button} onPress={updateUser}>
                     <Text style={styles.buttonText}>Update</Text>

@@ -48,7 +48,7 @@ function HomeScreen() {
             }}>
             <TopTab.Screen name="Yêu thích" component={LoveScreen}
                 options={{
-                    tabBarIcon: props => renderIcon(require('../../../assets/icons/heart.png'), props),
+                    // tabBarIcon: props => renderIcon(require('../../../assets/icons/heart.png'), props),
                 }} />
             <TopTab.Screen name="Phổ biến" component={PopularScreen} />
             <TopTab.Screen name="Trực tiếp" component={LiveScreen} />

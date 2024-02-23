@@ -2,22 +2,22 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container: {
-        flexDirection: 'column',
+        flexDirection: 'row',
         backgroundColor: '#B0E0E0',
         borderRadius: 4,
         padding: 16,
         margin: 10,
     },
     containerText: {
-        padding: 10,
-        marginHorizontal: 30,
-        flexDirection: 'row',
+        marginLeft: 30,
+        width: 135,
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+       
     },
     containerButton: {
-        padding: 10,
-        flexDirection: 'row',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -25,11 +25,11 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 4,
-        paddingVertical: 5,
+        padding: 4,
         marginHorizontal: 8,
+        marginBottom: 10,
+        marginTop: 10,
         backgroundColor: 'tomato',
-        marginBottom: 12,
-        marginTop: 12,
         color: '#fff',
         fontSize: 18,
         fontWeight: 'bold',
@@ -38,19 +38,19 @@ export const styles = StyleSheet.create({
         marginRight: 'auto',
         fontSize: 16,
         fontWeight: 'bold',
+        marginBottom: 10,
     },
     birthday: {
         marginRight: 'auto',
         fontSize: 16,
         fontWeight: 'bold',
     },
-    button:{
-        backgroundColor: 'tomato',
-        paddingVertical: 12,
-        paddingHorizontal: 16,
-        marginHorizontal: 8,
-        borderRadius: 8,
+    img:{
+        width: 80,
+        height: 80,
+        borderRadius: 80,
     },
+   
     buttonText:{
         color:'#fff',
         fontSize: 16,
@@ -77,12 +77,15 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     button:{
+        width: 80,
         backgroundColor: 'tomato',
         padding: 8,
         borderRadius: 4,
         marginLeft: 8,
+        marginBottom: 8,
     },
     buttonText:{
+        textAlign: 'center',
         color:'#fff',
         fontSize: 16,
         fontWeight: 'bold',
